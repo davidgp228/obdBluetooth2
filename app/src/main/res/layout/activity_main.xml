@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="api.obdapp.hella.veronika.obdbluetooth.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlsuperior"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btniniciar"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/pause" />
+
+        <Button
+            android:id="@+id/btnlocalizacion"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="false"
+            android:background="@drawable/locationred" />
+
+        <Button
+            android:id="@+id/btnbluetooth"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bluetooth" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tverror"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlsuperior"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorAccent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rlinferior"
+        android:layout_below="@+id/tverror"
+        android:background="#e5e4e4"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvresult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="------" />
+
+            <TextView
+                android:id="@+id/tvaync"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="------"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlinferior"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="false"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:id="@+id/tvubicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="GPS"
+            android:textColor="@android:color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tvcoordenadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvubicacion"
+            android:layout_centerHorizontal="true"
+            android:text="No disponible" />
+    </RelativeLayout>
+</RelativeLayout>
